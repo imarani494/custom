@@ -1,0 +1,138 @@
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s ease;
+}
+
+.App {
+  margin: 20px;
+  color: #333;
+}
+
+.table-container {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+th:hover {
+  background-color: #45a049;
+}
+
+th.sorted-asc::after {
+  content: " ↑";
+}
+
+th.sorted-desc::after {
+  content: " ↓";
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+input[type="text"] {
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 100%;
+  max-width: 200px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+
+body.dark-mode {
+  background-color: #181818;
+  color: #fff;
+}
+
+body.dark-mode .table-container {
+  background-color: #2c2c2c;
+}
+
+body.dark-mode table {
+  background-color: #333;
+  border-color: #444;
+}
+
+body.dark-mode th {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode th:hover {
+  background-color: #555;
+}
+
+body.dark-mode input[type="text"] {
+  background-color: #444;
+  color: #fff;
+  border-color: #666;
+}
+
+body.dark-mode input[type="text"]:focus {
+  border-color: #4CAF50;
+}
+
+button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
+@media (max-width: 768px) {
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+
+  .filter-input {
+    width: 100%;
+  }
+}
